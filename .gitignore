@@ -4,3 +4,4 @@ back/target
 vue/node_modules/
 back/Cargo.lock
 vue/yarn.lock
+vue/dist/
