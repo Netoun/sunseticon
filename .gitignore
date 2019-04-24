@@ -1,6 +1,6 @@
 
 back/target
 **/*.rs.bk
-vue/node_modules
+vue/node_modules/
 back/Cargo.lock
 vue/yarn.lock
