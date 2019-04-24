@@ -1,0 +1,11 @@
+[package]
+name = "sunseticon"
+version = "0.1.0"
+
+[dependencies]
+rocket = "0.4.0"
+rocket_codegen = "0.4.0"
+serde = "1.0.37"
+serde_derive = "1.0.37"
+serde_json = "1.0.13"
+rocket_cors = "0.4.0"
