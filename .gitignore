@@ -3,4 +3,4 @@
 **/*.rs.bk
 /vue/node_modules
 /back/Cargo.lock
-/vue-rocket/yarn.lock
+/vue/yarn.lock
