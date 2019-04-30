@@ -7,12 +7,15 @@ extern crate rocket_cors;
 extern crate serde;
 extern crate serde_json;
 
+mod icon;
+
 use rocket::http::Method;
 use rocket::response::NamedFile;
 use rocket_cors::{AllowedHeaders, AllowedOrigins};
-
+use rocket::response::content::Json;
 use std::io;
 use std::path::{Path, PathBuf};
+use icon::Image;
 
 #[get("/")]
 fn index() -> io::Result<NamedFile> {
@@ -35,6 +38,11 @@ fn hello() -> String {
     serde_json::to_string(&hello_message).unwrap()
 }
 
+#[get("/")]
+fn send() -> Json {
+   let image = new Image()
+}
+
 fn main() {
     let (allowed_origins, failed_origins) = AllowedOrigins::some(&["http://localhost:8000", "http://localhost:8080"]);
     assert!(failed_origins.is_empty());
@@ -49,6 +57,7 @@ fn main() {
 
     rocket::ignite()
         .mount("/", routes![index, files, hello])
+        .mount("/icon", routes![send])
         .attach(options)
         .launch();
 }

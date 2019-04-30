@@ -1,13 +1,18 @@
 <template>
-  <HelloWorld />
+  <v-app>
+    <Headers />
+    <IconList />
+  </v-app>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import Headers from '../components/core/Headers'
+import IconList from '../components/IconList'
 
-  export default {
-    components: {
-      HelloWorld
-    }
+export default {
+  components: {
+    Headers,
+    IconList
   }
+}
 </script>
