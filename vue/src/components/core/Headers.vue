@@ -3,8 +3,6 @@
     :clipped-left="$vuetify.breakpoint.lgAndUp"
     color="primary"
     dark
-    app
-    fixed
   >
     <v-toolbar-title>
       <v-avatar

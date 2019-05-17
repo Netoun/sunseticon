@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="sunseticon">
     <router-view></router-view>
   </v-app>
 </template>
@@ -14,3 +14,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.sunseticon {
+  background-color: white !important;
+}
+</style>

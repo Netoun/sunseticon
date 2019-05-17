@@ -1,13 +1,13 @@
 <template>
-  <v-app>
+  <div>
     <Headers />
     <IconList />
-  </v-app>
+  </div>
 </template>
 
 <script>
 import Headers from '../components/core/Headers'
-import IconList from '../components/IconList'
+import IconList from '../components/home/IconList'
 
 export default {
   components: {
