@@ -1,4 +1,0 @@
-POSTGRES_USER=netoun
-POSTGRES_PASSWORD=boston
-POSTGRES_HOST=localhost:5432
-POSTGRES_DB=sunseticon

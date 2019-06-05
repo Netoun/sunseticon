@@ -1,18 +1,10 @@
-<h1 align="center"> <b>Sunset Icon</b> </h1> <br>
 
-<p align="center">
-  <a>
-    <img alt="GitPoint" title="GitPoint" src="./SUNSET_LOGO.png" width="100">
-  </a>
-</p>
-</br>
-<p align="center">
-A simple site to upload images with javascript addon on illustrator and download free icon created with <b>Rocket</b> and <b>VueJS</b> (Rust & Javascript)
-</p>
-</br>
-
-
-```bash 
+.DEFAULT_GOAL := help
+help: 
+	@grep -E '(^[a-zA-Z_-]+:.*?##.*$$)|(^##)' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[32m%-30s\033[0m %s\n", $$1, $$2}' | sed -e 's/\[32m##/[33m/'
+.PHONY: help 
+##
+##
 ##             ^^                   @@@@@@@@@
 ##        ^^     |  ^^           @@@@@@@@@@@@@@@
 ##            \__|__           @@@@@@@@@@@@@@@@@@              ^^
@@ -30,4 +22,7 @@ A simple site to upload images with javascript addon on illustrator and download
 ##             (____\____\_)__(____(____)(__)   (__\___\__/\_)__)
 ##
 ##--------------------------------------------------------------------------
-```
+
+install:
+	cd vue && yarn
+	cd back && cargo install

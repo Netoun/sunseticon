@@ -4,7 +4,8 @@
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate rocket_contrib;
 extern crate multipart;
-
+extern crate dotenv;
+use dotenv::dotenv;
 extern crate rocket_cors;
 extern crate serde_json;
 extern crate sonic_client;
@@ -134,7 +135,7 @@ fn rocket() -> rocket::Rocket {
 }
 
 fn main() {
-
+    dotenv().ok();
     // let mut s = SearchChan::new("127.0.0.1", 1491, "SecretPassword").expect("Connection error");
     // let handle = s.read();
     // assert_eq!("CONNECTED <sonic-server v1.2.0>\r\n", s.connect().unwrap());

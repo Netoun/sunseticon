@@ -14,8 +14,6 @@ use std::ops::Deref;
 pub type Pool = r2d2::Pool<PostgresConnectionManager>;
 
 pub fn connect() -> Pool {
-  println!("test");
-  println!("{:?}", env::var("POSTGRES_USER").unwrap());
   let url = format!(
     "postgres://{}:{}@{}/{}",
     env::var("POSTGRES_USER").unwrap(),
